@@ -1,0 +1,31 @@
+/* соціальні мережі */
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: $color-icon;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--dark {
+    fill: $color-main;
+    background-color: $color-socials;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $color-main;
+    background-color: $color-accent;
+  }
+}

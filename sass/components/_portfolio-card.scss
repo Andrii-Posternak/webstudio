@@ -1,0 +1,58 @@
+/* картка портфоліо */
+
+.portfolio-card {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover {
+  box-shadow: $color-shadow-portfolio;
+}
+
+.portfolio-card__overlay-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card__overlay-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.53;
+  color: $color-main;
+  background-color: $color-bgn-overlay;
+  padding: 63px 24px;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover .portfolio-card__overlay-text {
+  transform: translateY(0);
+}
+
+.portfolio-card__content {
+  background-color: $color-main;
+  border-right: 1px solid $color-border-card;
+  border-bottom: 1px solid $color-border-card;
+  border-left: 1px solid $color-border-card;
+  padding: 20px 24px;
+}
+
+.portfolio-card__name {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $color-text-secondary;
+  margin-bottom: 4px;
+}
+
+.portfolio-card__type {
+  font-size: 16px;
+  line-height: 1.88;
+}

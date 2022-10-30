@@ -1,0 +1,22 @@
+/* футер */
+
+.section-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $color-bgn-dark;
+}
+
+.section-footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.section-footer__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $color-main;
+  margin-bottom: 20px;
+}
