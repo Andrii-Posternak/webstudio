@@ -1,15 +1,13 @@
 /* футер */
 
 .section-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  text-align: center;
   background-color: $color-bgn-dark;
 }
 
-.section-footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+.section-footer__box-social {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .section-footer__text {
@@ -19,4 +17,32 @@
   text-transform: uppercase;
   color: $color-main;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    row-gap: 60px;
+  }
+
+  .section-footer__box-social {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-footer__container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .section-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: left;
+  }
 }

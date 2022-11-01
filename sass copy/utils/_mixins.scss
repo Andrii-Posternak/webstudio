@@ -1,0 +1,7 @@
+@mixin title-section($fs: 36px, $ta: center, $mb: 50px) {
+  font-size: $fs;
+  line-height: 1.17;
+  text-align: $ta;
+  color: $color-text-secondary;
+  margin-bottom: $mb;
+}

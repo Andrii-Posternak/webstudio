@@ -6,15 +6,19 @@
 
 .section-clients__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
+}
+
+.section-clients__item {
+  width: calc((100% - 30px) / 2);
 }
 
 .section-clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 100%;
   height: 92px;
   border: 1px solid $color-icon;
   border-radius: 4px;
@@ -28,5 +32,21 @@
   &:focus {
     border-color: $color-accent;
     fill: $color-accent;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-clients__item {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-clients__title {
+    @include title-section(36px, 1.17, center, 50px);
+  }
+
+  .section-clients__list {
+    flex-wrap: nowrap;
   }
 }

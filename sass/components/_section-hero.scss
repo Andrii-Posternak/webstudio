@@ -1,11 +1,11 @@
 /* герой */
 
 .section-hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: $color-bgn-hero;
   background: linear-gradient(to right, $color-gradient, $color-gradient),
-    url('../images/section-hero/hero-image-bgn.jpg');
+    url('../images/section-hero/mobile/hero-image-bgn-m480х400@1х.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -17,13 +17,85 @@
 
 .section-hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $color-main;
-  width: 696px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192ppi),
+  screen and (min-resolution: 2dppx) {
+  .section-hero {
+    background: linear-gradient(to right, $color-gradient, $color-gradient),
+      url('../images/section-hero/mobile/hero-image-bgn-m480х400@2х.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .section-hero__title {
+    width: 360px;
+  }
+
+  .section-hero {
+    background: linear-gradient(to right, $color-gradient, $color-gradient),
+      url('../images/section-hero/tablet/hero-image-bgn-t768х400@1х.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192ppi),
+    screen and (min-resolution: 2dppx) {
+    .section-hero {
+      background: linear-gradient(to right, $color-gradient, $color-gradient),
+        url('../images/section-hero/tablet/hero-image-bgn-t768х400@2х.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-hero {
+    background: linear-gradient(to right, $color-gradient, $color-gradient),
+      url('../images/section-hero/hero-image-bgn.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192ppi),
+    screen and (min-resolution: 2dppx) {
+    .section-hero {
+      background: linear-gradient(to right, $color-gradient, $color-gradient),
+        url('../images/section-hero/hero-image-bgn-1600х600@2х.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .section-hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
 }

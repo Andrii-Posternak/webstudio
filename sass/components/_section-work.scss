@@ -1,11 +1,17 @@
 /* чим ми займаємося */
 
+@media screen and (max-width: 1199px) {
+  .section-work {
+    display: none;
+  }
+}
+
 .section-work {
   padding-top: 0;
 }
 
 .section-work__title {
-  @include title-section;
+  @include title-section(36px, 1.17, center, 50px);
 }
 
 .section-work__list {

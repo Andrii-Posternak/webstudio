@@ -19,7 +19,8 @@
     <header class="section page-header">
       <div class="container page-header__container">
         <!-- навігація сайту -->
-        <nav class="site-nav">
+
+        <nav class="site-nav menu">
           <a class="logo" href="./index.html" lang="en"
             >Web<span class="logo__content">Studio</span></a
           >
@@ -35,8 +36,10 @@
             </li>
           </ul>
         </nav>
+
         <!-- контакти -->
-        <ul class="contact-list">
+
+        <ul class="contact-list menu">
           <li class="contact-list__item">
             <a class="contact-list__link" href="mailto:info@devstudio.com">
               <svg class="contact-list__icon" width="16px" height="12px">
@@ -54,6 +57,64 @@
             >
           </li>
         </ul>
+
+        <!-- мобілка -->
+
+        <button
+          class="menu-toggle js-open-menu menu-toggle__burger"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40">
+            <use href="./images/sprite/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
+
+        <!-- мобільне меню -->
+
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg width="40" height="40">
+              <use href="./images/sprite/icons.svg#icon-close-burger"></use>
+            </svg>
+          </button>
+
+          <!-- мобільна навігація -->
+
+          <ul class="mobile-menu">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link mobile-menu__link--current" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="">Контакти</a>
+            </li>
+          </ul>
+
+          <!-- мобільні контакти -->
+
+          <ul class="contact-list-mobile">
+            <li class="contact-list-mobile__item contact-list-mobile__item--tel">
+              <a class="contact-list-mobile__link" href="tel:+380961111111"> +38 096 111 11 11</a>
+            </li>
+            <li class="contact-list-mobile__item">
+              <a class="contact-list-mobile__link" href="mailto:info@devstudio.com">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <!-- мобільні соцмережі -->
+
+          <ul class="social-link">
+            <li class="social-link__item"><a class="social-link__link" href="">Instagram</a></li>
+            <li class="social-link__item"><a class="social-link__link" href="">Twitter</a></li>
+            <li class="social-link__item"><a class="social-link__link" href="">Facebook</a></li>
+            <li class="social-link__item"><a class="social-link__link" href="">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -131,9 +192,13 @@
               <div class="section-work__overlay">
                 <img
                   class="section-work__img"
+                  srcset="
+                    ./images/section-work/img1.jpg            370w,
+                    ./images/section-work/img1-370x294@2x.jpg 740w
+                  "
+                  sizes="(min-width: 1200px) 370px"
                   src="./images/section-work/img1.jpg"
                   alt="людина пише код на комп'ютері"
-                  width="370"
                 />
                 <p class="section-work__overlay-text">Десктопні додатки</p>
               </div>
@@ -142,9 +207,13 @@
               <div class="section-work__overlay">
                 <img
                   class="section-work__img"
+                  srcset="
+                    ./images/section-work/img2.jpg            370w,
+                    ./images/section-work/img2-370x294@2x.jpg 740w
+                  "
+                  sizes="(min-width: 1200px) 370px"
                   src="./images/section-work/img2.jpg"
                   alt="телефон та ноутбук"
-                  width="370"
                 />
                 <p class="section-work__overlay-text">Мобільні додатки</p>
               </div>
@@ -153,9 +222,13 @@
               <div class="section-work__overlay">
                 <img
                   class="section-work__img"
+                  srcset="
+                    ./images/section-work/img3.jpg            370w,
+                    ./images/section-work/img3-370x294@2x.jpg 740w
+                  "
+                  sizes="(min-width: 1200px) 370px"
                   src="./images/section-work/img3.jpg"
                   alt="палітра кольорів в планшеті"
-                  width="370"
                 />
                 <p class="section-work__overlay-text">Дизайнерські рішення</p>
               </div>
@@ -171,10 +244,18 @@
           <ul class="section-team__list">
             <li class="section-team__item">
               <img
-                class="section-tea__img"
+                class="section-team__img"
+                srcset="
+                  ./images/section-team/mobile/photo1-m450x460@1x.jpg 450w,
+                  ./images/section-team/mobile/photo1-m450x460@2x.jpg 900w,
+                  ./images/section-team/tablet/photo1-t354x374@1x.jpg 354w,
+                  ./images/section-team/tablet/photo1-t354x374@2x.jpg 708w,
+                  ./images/section-team/photo1.jpg                    270w,
+                  ./images/section-team/photo1-270x260@2x.jpg         540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                 src="./images/section-team/photo1.jpg"
                 alt="Ігор Дем'яненко"
-                width="270"
               />
               <div class="section-team__content">
                 <h3 class="section-team__name">Ігор Дем'яненко</h3>
@@ -213,10 +294,18 @@
             </li>
             <li class="section-team__item">
               <img
-                class="section-tea__img"
+                class="section-team__img"
+                srcset="
+                  ./images/section-team/mobile/photo2-m450x460@1x.jpg 450w,
+                  ./images/section-team/mobile/photo2-m450x460@2x.jpg 900w,
+                  ./images/section-team/tablet/photo2-t354x374@1x.jpg 354w,
+                  ./images/section-team/tablet/photo2-t354x374@2x.jpg 708w,
+                  ./images/section-team/photo2.jpg                    270w,
+                  ./images/section-team/photo2-270x260@2x.jpg         540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                 src="./images/section-team/photo2.jpg"
                 alt="Ольга Рєпіна"
-                width="270"
               />
               <div class="section-team__content">
                 <h3 class="section-team__name">Ольга Рєпіна</h3>
@@ -255,10 +344,18 @@
             </li>
             <li class="section-team__item">
               <img
-                class="section-tea__img"
+                class="section-team__img"
+                srcset="
+                  ./images/section-team/mobile/photo3-m450x460@1x.jpg 450w,
+                  ./images/section-team/mobile/photo3-m450x460@2x.jpg 900w,
+                  ./images/section-team/tablet/photo3-t354x374@1x.jpg 354w,
+                  ./images/section-team/tablet/photo3-t354x374@2x.jpg 708w,
+                  ./images/section-team/photo3.jpg                    270w,
+                  ./images/section-team/photo3-270x260@2x.jpg         540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                 src="./images/section-team/photo3.jpg"
                 alt="Микола Тарасов"
-                width="270"
               />
               <div class="section-team__content">
                 <h3 class="section-team__name">Микола Тарасов</h3>
@@ -297,10 +394,18 @@
             </li>
             <li class="section-team__item">
               <img
-                class="section-tea__img"
+                class="section-team__img"
+                srcset="
+                  ./images/section-team/mobile/photo4-m450x460@1x.jpg 450w,
+                  ./images/section-team/mobile/photo4-m450x460@2x.jpg 900w,
+                  ./images/section-team/tablet/photo4-t354x374@1x.jpg 354w,
+                  ./images/section-team/tablet/photo4-t354x374@2x.jpg 708w,
+                  ./images/section-team/photo4.jpg                    270w,
+                  ./images/section-team/photo4-270x260@2x.jpg         540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                 src="./images/section-team/photo4.jpg"
                 alt="Михайло Єрмаков"
-                width="270"
               />
               <div class="section-team__content">
                 <h3 class="section-team__name">Михайло Єрмаков</h3>
@@ -392,7 +497,6 @@
         </div>
       </section>
     </main>
-    <!-- футер -->
 
     <footer class="section section-footer">
       <div class="container section-footer__container">
@@ -543,6 +647,8 @@
         </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

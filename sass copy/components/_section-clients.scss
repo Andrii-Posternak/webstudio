@@ -1,0 +1,32 @@
+/* постійні клієнти */
+
+.section-clients__title {
+  @include title-section;
+}
+
+.section-clients__list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.section-clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid $color-icon;
+  border-radius: 4px;
+  outline: transparent;
+  fill: $color-icon;
+  transition-property: border-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: $color-accent;
+    fill: $color-accent;
+  }
+}

@@ -1,19 +1,15 @@
 /* наші переваги */
 
-.section-benefit__list {
-  display: flex;
-  justify-content: space-between;
-}
-
 .section-benefit__item {
-  width: 270px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .section-benefit__box-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: $color-bgn-light;
   border-radius: 4px;
@@ -24,6 +20,30 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
   color: $color-text-secondary;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-benefit__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .section-benefit__item {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+
+  .section-benefit__subtitle {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-benefit__list {
+    flex-wrap: nowrap;
+  }
 }

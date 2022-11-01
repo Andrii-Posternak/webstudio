@@ -8,20 +8,20 @@
   @include title-section;
 }
 
-.section-team__list {
-  display: flex;
-  justify-content: space-between;
-}
 .section-team__item {
-  width: 270px;
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   background-color: $color-main;
   box-shadow: $color-shadow-card;
 }
 
+.section-team__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .section-team__content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .section-team__name {
@@ -39,4 +39,34 @@
 
 .section-team__profession {
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-team__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .section-team__item {
+    width: calc((100% - 30px) / 2);
+  }
+
+  .section-team__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-team__title {
+    @include title-section(36px, 1.17, center, 50px);
+  }
+
+  .section-team__list {
+    flex-wrap: nowrap;
+  }
+
+  .section-team__content {
+    padding-bottom: 30px;
+  }
 }

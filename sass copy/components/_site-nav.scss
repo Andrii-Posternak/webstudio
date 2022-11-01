@@ -1,0 +1,43 @@
+/* навігація сайту */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 93px;
+}
+
+.site-nav__list {
+  display: flex;
+  gap: 50px;
+}
+
+.site-nav__item {
+  position: relative;
+}
+
+.site-nav__link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $color-text-secondary;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--current::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -29px;
+    left: 0;
+    background-color: $color-accent;
+    border-radius: 2px;
+  }
+
+  &--current,
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}

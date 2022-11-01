@@ -1,0 +1,42 @@
+/* наша команда */
+
+.section-team {
+  background-color: $color-bgn-light;
+}
+
+.section-team__title {
+  @include title-section;
+}
+
+.section-team__list {
+  display: flex;
+  justify-content: space-between;
+}
+.section-team__item {
+  width: 270px;
+  border-radius: 0px 0px 4px 4px;
+  background-color: $color-main;
+  box-shadow: $color-shadow-card;
+}
+
+.section-team__content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.section-team__name {
+  font-weight: 500;
+  color: $color-text-secondary;
+  margin-bottom: 10px;
+}
+
+.section-team__name,
+.section-team__profession {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.section-team__profession {
+  margin-bottom: 16px;
+}

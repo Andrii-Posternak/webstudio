@@ -1,0 +1,25 @@
+/* контакти */
+
+.contact-list {
+  display: flex;
+  gap: 50px;
+}
+
+.contact-list__link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  fill: $color-text-main;
+  transition-property: fill, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $color-accent;
+    color: $color-accent;
+  }
+}

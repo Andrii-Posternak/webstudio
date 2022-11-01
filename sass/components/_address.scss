@@ -5,6 +5,10 @@
   margin-top: 20px;
 }
 
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
 .address__link {
   color: $color-main;
   transition-property: color;
@@ -14,10 +18,14 @@
 
 .address__link--gray {
   color: $color-text-contact;
-  margin-top: 9px;
-
   &:hover,
   &:focus {
     color: $color-accent;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address__item:not(:last-child) {
+    margin-bottom: 9px;
   }
 }
