@@ -419,7 +419,7 @@ img {
 }
 .contact-list-mobile__item--tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 27px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #2196f3;
@@ -571,7 +571,8 @@ img {
 /* контакти */
 .contact-list__link {
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -615,6 +616,10 @@ img {
         -ms-flex-align: center;
             align-items: center;
     gap: 30px;
+  }
+  .contact-list__link {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 /* герой */
@@ -1667,5 +1672,9 @@ img {
   .modal__form-input--textarea::placeholder {
     font-size: 12px;
     line-height: 1.17;
+  }
+  .modal__form-policy {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }/*# sourceMappingURL=main.css.map */
