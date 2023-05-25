@@ -1,5 +1,9 @@
 /* картка портфоліо */
 
+.hide {
+  display: none;
+}
+
 .portfolio-card {
   width: 100%;
   transition-property: box-shadow;

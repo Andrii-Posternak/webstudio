@@ -118,8 +118,11 @@
 
 .modal__form-checkbox {
   position: absolute;
-  opacity: 0;
+  bottom: 114px;
+  left: 42px;
   z-index: -1;
+
+  opacity: 0;
 }
 
 .modal__form-label-checkbox {
@@ -168,6 +171,11 @@
 @media screen and (min-width: 480px) {
   .modal {
     width: 480px;
+  }
+
+  .modal__form-checkbox {
+    bottom: 124px;
+    left: 63px;
   }
 }
 

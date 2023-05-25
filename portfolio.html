@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
+    <link rel="icon" href="./assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,12 +30,10 @@
               <a class="site-nav__link" href="./index.html">Студія</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--current" href="./portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="site-nav__link site-nav__link--current" href="#">Портфоліо</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="">Контакти</a>
+              <a class="site-nav__link" href="./contacts.html">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -88,12 +87,10 @@
               <a class="mobile-menu__link" href="./index.html">Студія</a>
             </li>
             <li class="mobile-menu__item">
-              <a class="mobile-menu__link mobile-menu__link--current" href="./portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="mobile-menu__link mobile-menu__link--current" href="#">Портфоліо</a>
             </li>
             <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="">Контакти</a>
+              <a class="mobile-menu__link" href="./contacts.html">Контакти</a>
             </li>
           </ul>
 
@@ -129,25 +126,40 @@
 
           <ul class="section-portfolio__list-filter">
             <li class="section-portfolio__item-filter">
-              <button class="btn" type="button">Усі</button>
+              <label class="filter-label btn checked">
+                <input class="filter-radio" type="radio" name="filter" value="Усі" checked />
+                Усі
+              </label>
             </li>
             <li class="section-portfolio__item-filter">
-              <button class="btn" type="button">Веб-сайти</button>
+              <label class="filter-label btn">
+                <input class="filter-radio" type="radio" name="filter" value="Веб-сайт" />
+                Веб-сайти
+              </label>
             </li>
             <li class="section-portfolio__item-filter">
-              <button class="btn" type="button">Додатки</button>
+              <label class="filter-label btn">
+                <input class="filter-radio" type="radio" name="filter" value="Додаток" />
+                Додатки
+              </label>
             </li>
             <li class="section-portfolio__item-filter">
-              <button class="btn" type="button">Дизайн</button>
+              <label class="filter-label btn">
+                <input class="filter-radio" type="radio" name="filter" value="Дизайн" />
+                Дизайн
+              </label>
             </li>
             <li class="section-portfolio__item-filter">
-              <button class="btn" type="button">Маркетинг</button>
+              <label class="filter-label btn">
+                <input class="filter-radio" type="radio" name="filter" value="Маркетинг" />
+                Маркетинг
+              </label>
             </li>
           </ul>
           <!-- приклади робіт -->
 
           <ul class="section-portfolio__list">
-            <li class="section-portfolio__item">
+            <li class="section-portfolio__item" data-type="Веб-сайт">
               <div class="portfolio-card">
                 <a
                   class="portfolio-card__link"
@@ -184,7 +196,7 @@
               </div>
             </li>
 
-            <li class="section-portfolio__item">
+            <li class="section-portfolio__item" data-type="Дизайн">
               <div class="portfolio-card">
                 <a
                   class="portfolio-card__link"
@@ -221,7 +233,7 @@
               </div>
             </li>
 
-            <li class="section-portfolio__item">
+            <li class="section-portfolio__item" data-type="Додаток">
               <div class="portfolio-card">
                 <a
                   class="portfolio-card__link"
@@ -258,7 +270,7 @@
               </div>
             </li>
 
-            <li class="section-portfolio__item">
+            <li class="section-portfolio__item" data-type="Маркетинг">
               <div class="portfolio-card">
                 <a
                   class="portfolio-card__link"
@@ -295,7 +307,7 @@
               </div>
             </li>
 
-            <li class="section-portfolio__item">
+            <li class="section-portfolio__item" data-type="Додаток">
               <div class="portfolio-card">
                 <a
                   class="portfolio-card__link"
@@ -332,7 +344,7 @@
               </div>
             </li>
 
-            <li class="section-portfolio__item">
+            <li class="section-portfolio__item" data-type="Веб-сайт">
               <div class="portfolio-card">
                 <a
                   class="portfolio-card__link"
@@ -369,7 +381,7 @@
               </div>
             </li>
 
-            <li class="section-portfolio__item">
+            <li class="section-portfolio__item" data-type="Дизайн">
               <div class="portfolio-card">
                 <a
                   class="portfolio-card__link"
@@ -406,7 +418,7 @@
               </div>
             </li>
 
-            <li class="section-portfolio__item">
+            <li class="section-portfolio__item" data-type="Маркетинг">
               <div class="portfolio-card">
                 <a
                   class="portfolio-card__link"
@@ -443,7 +455,7 @@
               </div>
             </li>
 
-            <li class="section-portfolio__item">
+            <li class="section-portfolio__item" data-type="Додаток">
               <div class="portfolio-card">
                 <a
                   class="portfolio-card__link"
@@ -572,13 +584,22 @@
       </div>
     </footer>
 
+    <!-- кнопка вгору -->
+
+    <div class="up-btn is-hidden">
+      <svg class="up-btn__icon" width="32px" height="32px">
+        <use href="./images/sprite/icons.svg#icon-arrow-up"></use>
+      </svg>
+    </div>
+
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-
-    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/mobile-menu.js" defer></script>
+    <script src="./js/filter.js" defer></script>
+    <script src="./js/up-btn.js" defer></script>
   </body>
 </html>

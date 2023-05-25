@@ -1,0 +1,13 @@
+/* сторінка контактів */
+
+.centered-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map {
+  width: 100%;
+  height: calc(100vh - 80px - 262px);
+  border: none;
+}

@@ -1,0 +1,24 @@
+.up-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  border: 2px solid $color-accent;
+  cursor: pointer;
+  background-color: lighten($color-accent, 30%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.up-btn:hover {
+  background-color: $color-main;
+}
+
+.up-btn__icon {
+  fill: $color-accent;
+}

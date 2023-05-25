@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
+    <link rel="icon" href="./assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,18 +22,16 @@
         <!-- навігація сайту -->
 
         <nav class="site-nav menu">
-          <a class="logo" href="./index.html" lang="en"
-            >Web<span class="logo__content">Studio</span></a
-          >
+          <a class="logo" href="#" lang="en">Web<span class="logo__content">Studio</span></a>
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--current" href="./index.html">Студія</a>
+              <a class="site-nav__link site-nav__link--current" href="#">Студія</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link" href="">Контакти</a>
+              <a class="site-nav__link" href="./contacts.html">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -83,13 +82,13 @@
 
           <ul class="mobile-menu">
             <li class="mobile-menu__item">
-              <a class="mobile-menu__link mobile-menu__link--current" href="./index.html">Студія</a>
+              <a class="mobile-menu__link mobile-menu__link--current" href="#">Студія</a>
             </li>
             <li class="mobile-menu__item">
               <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="">Контакти</a>
+              <a class="mobile-menu__link" href="./contacts.html">Контакти</a>
             </li>
           </ul>
 
@@ -572,6 +571,7 @@
                 type="email"
                 name="mail-subscribe"
                 placeholder="E-mail"
+                required
               />
             </label>
             <button class="btn btn--form" type="submit">
@@ -600,7 +600,7 @@
         <form class="modal__form">
           <label class="modal__form-label" for="name">Ім'я </label>
           <div class="modal__form-wrap">
-            <input class="modal__form-input" type="text" name="name" id="name" />
+            <input class="modal__form-input" type="text" name="name" id="name" required />
             <svg class="modal__form-icon" width="18px" height="18px">
               <use href="./images/sprite/icons.svg#icon-person"></use>
             </svg>
@@ -608,7 +608,7 @@
 
           <label class="modal__form-label" for="tel">Телефон </label>
           <div class="modal__form-wrap">
-            <input class="modal__form-input" type="tel" name="tel" id="tel" />
+            <input class="modal__form-input" type="tel" name="tel" id="tel" required />
             <svg class="modal__form-icon" width="18px" height="18px">
               <use href="./images/sprite/icons.svg#icon-telephone"></use>
             </svg>
@@ -616,7 +616,7 @@
 
           <label class="modal__form-label" for="email">Пошта</label>
           <div class="modal__form-wrap">
-            <input class="modal__form-input" type="email" name="mail" id="email" />
+            <input class="modal__form-input" type="email" name="mail" id="email" required />
             <svg class="modal__form-icon" width="18px" height="18px">
               <use href="./images/sprite/icons.svg#icon-email"></use>
             </svg>
@@ -639,7 +639,7 @@
             </span>
             <span class="modal__form-policy"
               >Погоджуюся з розсилкою та приймаю
-              <a class="modal__form-policy-link" href="">Умови договору</a></span
+              <a class="modal__form-policy-link" href="#">Умови договору</a></span
             ></label
           >
 
@@ -648,13 +648,22 @@
       </div>
     </div>
 
+    <!-- кнопка вгору -->
+
+    <div class="up-btn is-hidden">
+      <svg class="up-btn__icon" width="32px" height="32px">
+        <use href="./images/sprite/icons.svg#icon-arrow-up"></use>
+      </svg>
+    </div>
+
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/mobile-menu.js" defer></script>
+    <script src="./js/up-btn.js" defer></script>
   </body>
 </html>

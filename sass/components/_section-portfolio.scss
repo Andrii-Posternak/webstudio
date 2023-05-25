@@ -1,5 +1,11 @@
 /* портфоліо */
 
+.checked {
+  color: $color-main;
+  background-color: $color-accent;
+  box-shadow: $color-shadow-filter;
+}
+
 .section-portfolio__list-filter {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +18,13 @@
 
 .section-portfolio__item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.filter-radio {
+  position: absolute;
+  left: -100vw;
+  opacity: 0;
+  z-index: -1;
 }
 
 @media screen and (min-width: 768px) {

@@ -460,7 +460,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .site-nav__list,
-.contact-list {
+  .contact-list {
     display: none;
   }
 }
@@ -1259,6 +1259,13 @@ img {
   }
 }
 /* портфоліо */
+.checked {
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .section-portfolio__list-filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1278,6 +1285,13 @@ img {
 
 .section-portfolio__item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.filter-radio {
+  position: absolute;
+  left: -100vw;
+  opacity: 0;
+  z-index: -1;
 }
 
 @media screen and (min-width: 768px) {
@@ -1315,6 +1329,10 @@ img {
   }
 }
 /* картка портфоліо */
+.hide {
+  display: none;
+}
+
 .portfolio-card {
   width: 100%;
   -webkit-transition-property: -webkit-box-shadow;
@@ -1391,6 +1409,25 @@ img {
     padding: 20px 24px 56px;
   }
 }
+/* сторінка контактів */
+.centered-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.map {
+  width: 100%;
+  height: calc(100vh - 80px - 262px);
+  border: none;
+}
+
 /* бекдроп */
 .is-hidden {
   visibility: hidden;
@@ -1582,8 +1619,10 @@ img {
 
 .modal__form-checkbox {
   position: absolute;
-  opacity: 0;
+  bottom: 114px;
+  left: 42px;
   z-index: -1;
+  opacity: 0;
 }
 
 .modal__form-label-checkbox {
@@ -1644,6 +1683,10 @@ img {
   .modal {
     width: 480px;
   }
+  .modal__form-checkbox {
+    bottom: 124px;
+    left: 63px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -1677,4 +1720,32 @@ img {
     font-size: 14px;
     line-height: 1.71;
   }
+}
+.up-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  border: 2px solid #2196f3;
+  cursor: pointer;
+  background-color: #b2dbfb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.up-btn:hover {
+  background-color: #ffffff;
+}
+
+.up-btn__icon {
+  fill: #2196f3;
 }/*# sourceMappingURL=main.css.map */
